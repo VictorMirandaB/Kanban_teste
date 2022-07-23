@@ -30,7 +30,7 @@ export default function TaskList({
             />
           );
         })}
-        {tasks.lenght === 0 && <div className="empty-list">Lista vazia</div>}
+        {tasks.length === 0 && <div className="empty-list">Lista vazia</div>}
         <button onClick={addTask} className="btn">
           <img src={plusIco} alt="sinal de mais" />
           Adicionar Tarefas

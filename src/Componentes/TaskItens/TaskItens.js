@@ -28,7 +28,10 @@ export default function TaskItens({id, title, taskState, onTaskUpdate, onDeleteT
 
   
   return (<div className="task-item">
-    <input type="text" value={editableTitle} onChange={onTitleChange} onKeyPress={onKeyPress}/>
+    <input type="text" 
+    value={editableTitle} 
+    onChange={onTitleChange} 
+    onKeyPress={onKeyPress}/>
   </div>)
 }
   else{
@@ -49,5 +52,5 @@ export default function TaskItens({id, title, taskState, onTaskUpdate, onDeleteT
 TaskItens.PropTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  taskState: PropTypes.string.isRequired
+  taskState: PropTypes.string.isRequired,
 };
