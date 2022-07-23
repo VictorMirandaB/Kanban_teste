@@ -8,15 +8,19 @@ const generateId = () => {
   idAcc = idAcc + 1;
   return idAcc;
 };
+
 export default function App() {
   const [tasks, setTasks] = useState([]);
   const addTask = (title, state) => {
-    const newTask = { id: generateId(), title, state };
+    const newTask = {
+      id: generateId(),
+      title,
+      state
+    };
     setTasks((existingTasks) => {
       return [...existingTasks, newTask];
     });
   };
-
   const updateTask = (id, title, state) => {
     setTasks((existingTasks) => {
       return existingTasks.map((task) => {
@@ -28,15 +32,16 @@ export default function App() {
       });
     });
   };
+
   const deleteTask = (id) => {
     setTasks((existingTasks) => {
       return existingTasks.filter((task) => task.id !== id);
     });
   };
+
   return (
     <div className="App">
       <NavBar />
-
       <div className="container">
         <TaskList
           title="Pendente"

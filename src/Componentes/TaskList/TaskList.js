@@ -1,19 +1,20 @@
 import "./TaskList.css";
 import PropTypes from "prop-types";
-import TaskItens from "/src/Componentes/TaskItens/TaskItens";
+import TaskItens from "../TaskItens/TaskItens";
 import plusIco from "../img/plus.ico";
 
 export default function TaskList({
   title,
   taskState,
-  onAddTask,
+  onAddTasks,
   tasks,
   onTaskUpdate,
   onDeleteTask
 }) {
   const addTask = () => {
-    onAddTask("Nova Tarefa", taskState);
+    onAddTasks("Nova Tarefa", taskState);
   };
+
   return (
     <div className="tasklist">
       <div className="title">{title}</div>
@@ -39,7 +40,8 @@ export default function TaskList({
     </div>
   );
 }
-TaskList.PropTypes = {
+
+TaskList.propTypes = {
   title: PropTypes.string.isRequired,
   onAddTask: PropTypes.func.isRequired,
   tasks: PropTypes.array.isRequired
