@@ -43,6 +43,6 @@ export default function TaskList({
 
 TaskList.propTypes = {
   title: PropTypes.string.isRequired,
-  onAddTask: PropTypes.func.isRequired,
+  onAddTasks: PropTypes.func.isRequired,
   tasks: PropTypes.array.isRequired
 };
