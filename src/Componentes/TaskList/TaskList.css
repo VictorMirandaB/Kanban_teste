@@ -31,3 +31,12 @@
   background: #00b8d4;
   transition: background 0.3s;
 }
+.tasklist .btn:hover {
+  background-color: #0091a8;
+  cursor: pointer;
+}
+.tasklist .btn img {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+}
