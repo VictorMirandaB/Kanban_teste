@@ -1,6 +1,6 @@
 import "./TaskList.css";
 import PropTypes from "prop-types";
-import TaskItens from "./Componentes/TaskItens/TaskItens";
+import TaskItens from "/src/Componentes/TaskItens/TaskItens";
 import plusIco from "../img/plus.ico";
 
 export default function TaskList({
